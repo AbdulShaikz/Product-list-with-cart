@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+:root {
+  --clr-Red: #c73a0f;
+  --clr-Green: #1ea475;
+  --clr-Rose-50: #fcf9f7;
+  --clr-Rose-100: #f4edeb;
+  --clr-Rose-300: #c9aea6;
+  --clr-Rose-400: #ad8985;
+  --clr-Rose-500: #87635a;
+  --clr-Rose-900: #260f08;
+
+  --ff-main: "Red Hat Text";
+
+  --fs-product-names: 1rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+    display: block;
+}
+
+body{
+    font-family: var(--ff-main);
+    font-optical-sizing: auto;
+    background-color: var(--clr-Rose-50);
+    line-height: 2rem;
+}
+
+.main{}
+
+.inner-wrap{
+  max-width: 71.25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.grid{
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 80%;
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media screen and (max-width:650px) {
+  .grid{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 100%;
+  }
+  
+  .grid-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+  }
+}
